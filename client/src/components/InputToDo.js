@@ -10,7 +10,7 @@ export default function InputToDo () {
         e.preventDefault()
         try {
             const body = { description }
-            const response = fetch("http://localhost:3131/todos", {
+            const response = fetch("https://pern-homework.herokuapp.com/todos", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(body)

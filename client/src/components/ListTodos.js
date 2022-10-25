@@ -11,7 +11,7 @@ export default function ListTodos () {
     const deleteToDo = async id => {
         try {
 
-            const deleteToDo = await fetch(`http://localhost:3131/todos/${id}`, {
+            const deleteToDo = await fetch(`https://pern-homework.herokuapp.com/todos/${id}`, {
                 method: "DELETE"
             })
 
@@ -25,7 +25,7 @@ export default function ListTodos () {
     const getTodos = async() => {
         try {
 
-            const response = await fetch('http://localhost:3131/todos')
+            const response = await fetch('https://pern-homework.herokuapp.com/todos')
 
             const jsonData = await response.json()
 

@@ -16,7 +16,7 @@ export default function EditTodo({todo}) {
         try {
 
             const body = { description }
-            const response = await fetch(`http://localhost:3131/todos/${todo.todo_id}`, {
+            const response = await fetch(`https://pern-homework.herokuapp.com/todos/${todo.todo_id}`, {
                 method: "PUT",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(body)
