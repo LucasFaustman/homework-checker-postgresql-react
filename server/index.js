@@ -89,6 +89,6 @@ app.delete('/todos/:id', async(req,res) => {
     }
 })
 
-app.listen(3131, () => {
-    console.log("Server has started on port 3131")
+app.listen(process.env.PORT || 3131, () => {
+    console.log("Server has started")
 })

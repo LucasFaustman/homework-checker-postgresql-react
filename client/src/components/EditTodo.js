@@ -29,38 +29,38 @@ export default function EditTodo({todo}) {
     }
     return (
         <Fragment>
-            <button type="button" class="btn btn-warning" data-toggle="modal" data-target={`#id${todo.todo_id}`}>
+            <button type="button" className="btn btn-warning" data-toggle="modal" data-target={`#id${todo.todo_id}`}>
             Edit
             </button>
 
 
-            <div class="modal" 
+            <div className="modal" 
             id={`id${todo.todo_id}`}  
             onClick={() => setDescription(todo.description)}>
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Edit Homework Task</h4>
+            <div className="modal-dialog">
+                <div className="modal-content">
+                <div className="modal-header">
+                    <h4 className="modal-title">Edit Homework Task</h4>
                     <button type="button"
                     onClick={() => setDescription(todo.description)}
-                     class="close" 
+                     className="close" 
                      data-dismiss="modal">&times;
                      </button>
                 </div>
-                <div class="modal-body">
+                <div className="modal-body">
                     <input type="text" 
                     value={description}
                     onChange={handleChange}
                     className="form-control" />
                 </div>
-                <div class="modal-footer">
+                <div className="modal-footer">
                 <button type="button" 
-                    class="btn btn-warning" data-dismiss="modal"
+                    className="btn btn-warning" data-dismiss="modal"
                     onClick={e => updateDescription(e)}>
                         Edit
                 </button>
                     <button type="button" 
-                    class="btn btn-danger" 
+                    className="btn btn-danger" 
                     onClick={() => setDescription(todo.description)} 
                     data-dismiss="modal">Close
                 </button>
